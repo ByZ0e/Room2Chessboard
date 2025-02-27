@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>R2C: Mapping Room to Chessboard to Unlock LLM As Low-Level Action Planner</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">R2C: Mapping Room to Chessboard to Unlock LLM As Low-Level Action Planner</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+<!--               <span class="author-block">
+                <a href="https://github.com/ByZ0e" target="_blank">Ziyi Bai</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://github.com/HanXuan-Li" target="_blank">Hanxuan Li</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://github.com/FuBin29" target="_blank">Bin Fu</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="" target="_blank">Chuyan Xiong</a>,</span>
+                  <span class="author-block">
+                    <a href="https://rpwang.net" target="_blank">Ruiping Wang</a>,</span>
+                  <span class="author-block">
+                    <a href="http://vipl.ict.ac.cn/people/_xlchen/" target="_blank">Xilin Chen</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/r2c_1.5x.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We unlock LLM as low-level action planner by mapping the room into chessboard, which we call Room to Chessboard (R2C). 
+        It provides a communication platform between LLM and Robot. Robot can convey room state to LLM, and LLM can perform low-level action plannning by playing chess.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            LLMs have been proved to be a general high-level task planner for diverse embodied tasks. However, there exists a natural gap between LLM and the low-level executor. LLM cannot sufficiently perceives the whole complex environment state, often leads to unavailable and unattainable plans that robot cannot follow. In this work, we achieve high-level and low-level planning in an integrated manner by providing a communication platform. Our insight is to formulate the task as playing chess with LLMs. We map the room into a semantic chessboard, which we call Room to Chessboard (R2C). Each grid represents the position and size of objects inside the room. We find that chessboard is concise enough for LLMs to conduct semantic searches with global view of the room. Also, the chessboard is informative enough to convey detailed environment state for LLMs to predict executable low-level actions. To enhance LLM's low-level decision-making capacity, we also design a Chain-of-Thought fine-tuning paradigm to guide LLMs make more interpretable planning. We implement the R2C framework with both fine-tuned open-sourced LLMs and close-sourced LLMs like GPT-4. Evaluations on challenging ALFRED benchmark indicate that using LLMs as low-level action planners is feasible by efficiently communication between LLM and the robot. We also demonstrate that R2C is a versatile framework for diverse free-form robotic planning tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/fig-1.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          The comparison between LLM as a high-level planner and as a low-level planner. Upper: most existing methods rely solely on LLM as a high-level planner. the robot cannot effectively convey spatial information to LLM, resulting in LLM only being able to perform basic task decomposition; Bellow: the R2C framework transforms the real environment into a chessboard that both LLM and the robot can understand, turning embodied tasks into a chess game. LLM can then engage in low-level planning based on the grid information of the chessboard.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/fig-2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Overview of R2C: After high-level planning, environmental information is transformed into a grid-based chessboard by the Environment Filter. Subsequently, this textual chessboard, along with the task rules, forms the prompt input for either a zero-shot or CoT fine-tuned LLM. Finally, the LLM predicts the next position, which is then executed by the robot to obtain new visual information, thereby completing the loop.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/fig3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Case study for R2C. The red lines on the chessboard are trajectories predicted by LLM, where each key point is marked with circles. We visualize the HLP and LLP process at steps 8, 15, and 34 in detail.
+       </h2>
+     </div>
+     <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/open_vocabulary.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Generated rooms for open vocabulary tasks evaluation.
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Success Cases</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/success_demo1.mov"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/success_demo2.mov"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/success_demo3.mov"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Failed Cases</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/failure_demo1.mov"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/failure_demo2.mov"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/failure_demo3.mov"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Deploy on Locobot</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1" style="margin: 20px 0; text-align: center;">
+          <iframe width="1120" height="630" src="https://www.youtube.com/embed/iJg_dzds7ps?si=MEFb71xCIt-IVI55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="item item-video2" style="margin: 20px 0; text-align: center;">
+          <iframe width="1120" height="630" src="https://www.youtube.com/embed/z04d1j8Zg8E?si=9rTUkyMi5WaQ7mcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="item item-video3" style="margin: 20px 0; text-align: center;">
+          <iframe width="1120" height="630" src="https://www.youtube.com/embed/xdgoybIOnDU?si=xYyk6QJIDVT_SHoD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
